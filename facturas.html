@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="estilos3.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/hundrake" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script type="module" src="productos.js"></script>
+</head>
+<body>
+    <!--buscador: para mostrar los tickets disponibles-->
+    <header class="site-header shadow-lg bg-body rounded">
+        <div class="header-container">
+            <div class="navBar">
+                <div class="logo"><a href="index.html"><img src="logo2.png">FoodStatistics</a></div>
+                <div><a href="productos.html">Estadísticas</a></div>
+                <div><a href="facturas.html">Tickets</a></div>
+                <div><a href="#">Contacto</a></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="searchbar" class="d-flex justify-content-around mt-3 menu-nav">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Tickets
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="tablinks dropdown-item" href="#" onclick="openTab(event, 'form')">Crear ticket</a></li>
+                  <li><a class="tablinks dropdown-item" href="#" onclick="openTab(event, 'list')">Lista de tickets</a></li>
+                </ul>
+              </div>
+            <div class="w-50 input-group rounded">
+                <input type="search" class="form-control rounded" placeholder="Busca un producto..." aria-label="Search" aria-describedby="search-addon" />
+                <span class="input-group-text border-0" id="search-addon">
+                  <i class="fas fa-search"></i>
+                </span>
+            </div>
+        <button id="new-ticket-btn"><i class="fa fa-solid fa-file-circle-plus"></i></button>
+        </div>
+        <div class="tabcontent" id="form">
+            <div class="shadow-lg bg-body rounded" id="ticket-form">
+                <form>
+                    <h2>Nuevo ticket</h2>
+                    <label for="producto">Producto:</label><br>
+                    <select id="producto" name="field1">
+                        <option value="manzana">Manzanza</option>
+                        <option value="naranja">Naranja</option>
+                        <option value="pera">Pera</option>
+                        <option value="platano">Plátano</option>
+                        <option value="limon">Limón</option>
+                        <option value="melon">Melón</option>
+                        <option value="mandarina">Mandarina</option>
+                        <option value="uvasblancas">Uvas blancas</option>
+                        <option value="frambuesa">Frambuesa</option>
+                        <option value="brocoli">Brócoli</option>
+                        <option value="calabacin">Calabacín</option>
+                        <option value="cebolla">Cebolla</option>
+                        <option value="pimientorojo">Pimiento rojo</option>
+                        <option value="pimientoverde">Pimiento verde</option>
+                        <option value="lechuga">Lechuga</option>
+                        <option value="berenjena">Berenjena</option>
+                        <option value="ajo">Ajo</option>
+                        <option value="apio">Apio</option>
+                        <option value="lombarda">Lombarda</option>
+                    </select><br><br>
+                    <label for="tienda">Tienda:</label><br>
+                    <input type="text" name="field2" placeholder="Introduce la tienda"><br><br>
+                    <label for="tienda">Cantidad:</label><br>
+                    <input type="text" name="field2" placeholder="Cantidad"><br><br>
+                    <label for="fecha">Fecha de la compra:</label><br>
+                    <input type="date" name="fecha"/><br><br>
+                    <button>Crear ticket</button>
+                </form>
+            </div>
+        </div>
+        <div class="tabcontent" id="list">
+            <div id= "id-pagina"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="logo"><a href="index.html"><img src="logo2.png">FoodStatistics</a></div>
+        <span class="copyright">&copy;2023, Raquel Fernández Melgares</span>
+    </footer>
+    <script>
+        function openTab(evt, opcion) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(opcion).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="formTicket.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="estilos2.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/hundrake" rel="stylesheet">
+    <script type="module" src="productos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header class="site-header shadow-lg bg-body rounded">
+        <div class="header-container">
+            <div class="navBar">
+                <div class="logo"><a href="index.html"><img src="logo2.png">FoodStatistics</a></div>
+                <div><a href="productos.html">Estadísticas</a></div>
+                <div><a href="facturas.html">Tickets</a></div>
+                <div><a href="#">Contacto</a></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="d-flex justify-content-around mt-3 menu-nav">
+                <ul class="nav nav-tabs" aria-labelledby="products-dropdown" role="tablist">
+                    <li><a id="tipoFruta" class="dropdown-item" data-bs-toggle="tab" href="#frutas">🍇Frutas</a></li>
+                    <li><a id="tipoVerdura" class="dropdown-item" data-bs-toggle="tab" href="#verduras">🥑 Verduras</a></li>
+                </ul>
+                <div class="w-50 input-group rounded">
+                    <input type="search" id="id-textoBuscar" class="form-control rounded" placeholder="Busca un producto..." aria-label="Search" />
+                    <button class="input-group-text border-0" id="id-botonBuscar">
+                    <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            <button id="new-ticket-btn"><i class="fa fa-solid fa-file-circle-plus"></i></button>
+        </div>
+        <div class="tab-content">
+            <div id="frutas">
+                <figure id="manzana" class="figures">
+                    <a><img src="apple.jpg" class="products"></a>
+                    <figcaption>Manzana</figcaption>
+                </figure>
+                <figure id="naranja" class="figures">
+                    <a><img src="orange.jpg" class="products"></a>
+                    <figcaption>Naranja</figcaption>
+                </figure>
+                <figure id="pera" class="figures">
+                    <a><img src="pear.jpg" class="products"></a>
+                    <figcaption>Pera</figcaption>
+                </figure>
+                <figure id="platano" class="figures">
+                    <a><img src="banana.jpg" class="products"></a>
+                    <figcaption>Plátano</figcaption>
+                </figure>
+                <figure id="limon" class="figures">
+                    <a><img src="lemon.jpg" class="products"></a>
+                    <figcaption>Limón</figcaption>
+                </figure>
+                <figure id="melon" class="figures">
+                    <a><img src="melon.jpg" class="products"></a>
+                    <figcaption>Melón</figcaption>
+                </figure>
+                <figure id="ciruela" class="figures">
+                    <a><img src="plum.png" class="products"></a>
+                    <figcaption>Ciruela</figcaption>
+                </figure>
+                <figure id="mandarina" class="figures">
+                    <a><img src="mandarin.jpg" class="products"></a>
+                    <figcaption>Mandarina</figcaption>
+                </figure>
+                <figure id="uvas" class="figures">
+                    <a><img src="grapes.jpg" class="products"></a>
+                    <figcaption>Uvas blancas</figcaption>
+                </figure>
+                <figure id="frambuesa" class="figures">
+                    <a><img src="strawberry.jpg" class="products"></a>
+                    <figcaption>Frambuesa</figcaption>
+                </figure>
+            </div>
+            <div id="verduras">
+                <figure id="brocoli" class="figures">
+                    <a><img src="broccoli.jpg" class="products"></a>
+                    <figcaption>Brócoli</figcaption>
+                </figure>
+                <figure id="calabacin" class="figures">
+                    <a><img src="zucchini.jpg" class="products"></a>
+                    <figcaption>Calabacín</figcaption>
+                </figure>
+                <figure id="cebolla" class="figures">
+                    <a><img src="onion.jpg" class="products"></a>
+                    <figcaption>Cebolla</figcaption>
+                </figure>
+                <figure id="pimientoRojo" class="figures">
+                    <a><img src="redpepper.jpg" class="products"></a>
+                    <figcaption>Pimiento rojo</figcaption>
+                </figure>
+                <figure id="pimientoVerde" class="figures">
+                    <a><img src="greenpepper.jpg" class="products"></a>
+                    <figcaption>Pimiento verde</figcaption>
+                </figure>
+                <figure id="lechuga" class="figures">
+                    <a><img src="lettuce.jpg" class="products"></a>
+                    <figcaption>Lechuga</figcaption>
+                </figure>
+                <figure id="berenjena" class="figures">
+                    <a><img src="eggplant.jpg" class="products"></a>
+                    <figcaption>Berenjena</figcaption>
+                </figure>
+                <figure id="ajo" class="figures">
+                    <a><img src="garlic.jpg" class="products"></a>
+                    <figcaption>Ajo</figcaption>
+                </figure>
+                <figure id="apio" class="figures">
+                    <a><img src="celery.png" class="products"></a>
+                    <figcaption>Apio</figcaption>
+                </figure>
+                <figure id="lombarda" class="figures">
+                    <a><img src="lombarda.jpg" class="products"></a>
+                    <figcaption>Lombarda</figcaption>
+                </figure>
+            </div>
+
+        </div>
+            <div id="myModal" class="modal">
+                <div id="modal-content">
+                    <span id="close">&times;</span>
+                    <div>
+                        <header id="modal-header">
+                            <h2 id="modal-title">Gráfico del producto</h2>
+                        </header>
+                        <canvas id="id-grafico" style="width:100%;max-width:700px;"></canvas>
+                        <div id="id-resultados"></div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="logo"><a href="index.html"><img src="logo2.png">FoodStatistics</a></div>
+        <span class="copyright">&copy;2023, Raquel Fernández Melgares</span>
+    </footer>
+
+    <script>
+        let modal = document.getElementById("myModal");
+
+        let btn = document.getElementsByClassName("boton");
+
+        let close = document.getElementById("close");
+
+        close.onclick = function() {
+            modal.style.display= "none";
+        }
+    </script>
+    <script type="module" src="ticket.buscar.js"></script>
+
+</body>
+</html>

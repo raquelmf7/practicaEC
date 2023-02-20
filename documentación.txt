@@ -1,0 +1,29 @@
+DESCRIPCIÓN
+-------------------
+Se crea una página donde se pueden generar, modificar y borrar tickets de compra. A partir
+de estos tickets, se genera una gráfica de cada producto que muestra la evolución de precio
+de cada producto.
+
+QUIÉN ENTREGA
+-------------------
+Nombre: Raquel Fernández Melgares
+Fecha: 12/01/2023
+
+COMPONENTES DE LA ENTREGA
+--------------------------
+* index.html es la página principal.
+* productos.html es la página donde se pueden comprobar las estadísticas de cada producto.
+* facturas.html es la página donde se visualizan los tickets creados.
+* estilos.css es la página de estilos de index.html.
+* estilos2.css es la página de estilos de productos.html.
+* estilos3.css es la página de estilos de estadisticas.html.
+
+PRUEBAS
+--------
+La página se ha probado en los navegadores Google Chrome (versión 108.0.5359.125) y Microsoft
+Edge (versión 108.0.5359.125).
+
+FUENTES
+-------
+
+W3Schools, Stack Overflow.

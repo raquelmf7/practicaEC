@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:600,300,300i&subset=latin-ext");
+
+body {
+    font-family:"Merriweather",serif;
+    font-style: normal;
+    margin: 0;
+    min-height: 100vh;
+    flex-flow: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/*Estilos de la barra de navegación principal*/
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.navBar div {
+  margin: 5px 10px 0px 10px;
+  transition: 0.8s all;
+  padding: 15px;
+}
+
+.navBar div a {
+  text-decoration: none;
+  color: black;
+}
+
+.navBar div:hover {
+  background: #e1e1e1;
+}
+
+@media (max-width: 500px) {
+  .navBar{
+    flex-direction: column;
+  }
+}
+
+.logo {
+  font-family: 'Hundrake', sans-serif;
+  font-size: 25px;
+}
+
+.logo img {
+  width: 30px;
+}
+
+.menu-nav {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-nav button {
+  border-radius: 20%;
+  border: 1px solid #fefefe;
+}
+
+.tabcontent {
+  -webkit-animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#new-ticket-btn {
+  margin-top: 0;
+  width: 40px;
+}
+
+#list {
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+#form {
+  display: none;
+}
+
+#form input {
+  width: 80%;
+}
+
+#ticket-form {
+  margin: auto;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid black;
+  width: 60%;
+  border-radius: 2%;
+}
+
+#ticket-form button {
+  border: 1px solid black;
+  background-color: #CBDCE1;
+}
+
+#products-button {
+  margin-top: 20px;
+  border-radius: 5%;
+  border: 1px solid black;
+}
+
+.ticket {
+  border: 1px solid black;
+  width: 300px;
+  border-radius: 3%;
+}
+
+.ticketHeader {
+  border-bottom: 1px solid #ccc;
+}
+
+#ticket1 h5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#ticketBody {
+  border-bottom: 1px solid #ccc;
+}
+
+.ticketFooter {
+  border-top: solid #ccc 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.ticketFooter button {
+  padding-right: 5px;
+  padding-left: 5px;
+  border: 0;
+}
+
+.draw {
+  margin: 10px;
+}
+
+.divTicket {
+  width: 600px;
+  display: flex;
+}
+
+.divNavegacion {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.divNavegacion button {
+  margin: 5px;
+}
+
+.botonSiguiente, .botonAnterior {
+  border: 1px solid #ccc;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 1em 8%;
+  background-color: #CBDCE1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
